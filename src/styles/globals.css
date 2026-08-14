@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens: tailwind.config.js points bg/surface/border/text/muted/accent
+   at these variables, so every existing `bg-bg`, `text-text`, etc. class
+   automatically flips when the `.dark` class is toggled on <html>.
+   Values are space-separated RGB triplets (not hex) so both Tailwind's
+   opacity modifiers and the plain CSS below can use them. */
+:root {
+  --color-bg: 247 247 245;       /* #F7F7F5 */
+  --color-surface: 255 255 255;  /* #FFFFFF */
+  --color-border: 228 228 225;   /* #E4E4E1 */
+  --color-text: 20 23 28;        /* #14171C */
+  --color-muted: 107 114 128;    /* #6B7280 */
+  --color-accent: 13 148 136;    /* #0D9488 */
+}
+
+.dark {
+  --color-bg: 11 13 16;          /* #0B0D10 */
+  --color-surface: 20 23 28;     /* #14171C */
+  --color-border: 36 40 48;      /* #242830 */
+  --color-text: 231 233 236;     /* #E7E9EC */
+  --color-muted: 138 144 156;    /* #8A909C */
+  --color-accent: 94 234 212;    /* #5EEAD4 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background-color: rgb(var(--color-accent) / 0.3);
+    color: rgb(var(--color-text));
+  }
+  :focus-visible {
+    @apply outline-2 outline-accent outline-offset-2;
+  }
+}
+
+@layer components {
+  .section {
+    @apply max-w-5xl mx-auto px-6 py-24;
+  }
+  .eyebrow {
+    @apply font-mono text-sm text-accent tracking-widest uppercase mb-3;
+  }
+
+  /* 2026-style hover lift + glow, reused on project/skill cards */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1.5 hover:border-accent;
+  }
+  .card-hover:hover {
+    box-shadow: 0 12px 40px -12px rgb(var(--color-accent) / 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
