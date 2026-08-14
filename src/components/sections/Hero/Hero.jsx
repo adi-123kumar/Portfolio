@@ -27,11 +27,9 @@ export default function Hero() {
             Software Developer
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="font-display font-bold text-4xl md:text-6xl leading-tight max-w-xl">
-            I build things that live on the internet.
-          </motion.h1>
+            I build software that makes ideas real.          </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-muted text-lg mt-6 max-w-xl">
-            Your one-line value proposition — what you build, for whom, and
-            what makes your approach different.
+            Full-stack developer turning concepts into functional, scalable web applications.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-8 flex gap-4 justify-center md:justify-start">
             <motion.a

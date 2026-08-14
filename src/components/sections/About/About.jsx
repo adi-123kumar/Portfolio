@@ -8,9 +8,7 @@ export default function About() {
       <motion.h2 {...useScrollAnimation(0.1)} className="font-display font-bold text-3xl mb-6">Who I am</motion.h2>
       <div className="flex flex-col-reverse md:flex-row gap-8 items-start">
         <motion.p {...useScrollAnimation(0.2)} className="text-muted leading-relaxed max-w-2xl">
-          Write 2–4 sentences here: your background, what kind of problems you
-          like solving, and a personal detail that makes you memorable. Avoid
-          generic phrasing like "passionate developer" — be specific.
+          Full-stack developer building modern, responsive, and practical web applications. I work across the frontend, backend, and database layers to turn ideas into reliable products that people can actually use.
         </motion.p>
         <motion.img
           {...useScrollAnimation(0.2)}
