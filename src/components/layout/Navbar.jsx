@@ -17,7 +17,7 @@ export default function Navbar() {
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
 
         <a href="#" className="font-display font-bold text-lg">
-          YN<span className="text-accent">.</span>
+          ADITYA KUMAR<span className="text-accent">.</span>
         </a>
 
         <ul className="hidden md:flex gap-8 text-sm text-muted">
