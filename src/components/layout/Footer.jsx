@@ -10,7 +10,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <p>© {new Date().getFullYear()} Your Name. Built with React + Tailwind.</p>
+      <p>© {new Date().getFullYear()} Aditya Kumar. Built with React + Tailwind.</p>
     </footer>
   );
 }
